@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | OCMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <body>
+
+        <div class="page-wrapper">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar glass" style="border-radius:0;">
+                <div class="sidebar-logo text-gradient mb-8">OCMS Platform</div>
+
+                <nav class="nav-links">
+                    <li class="nav-item"><a href="dashboard.html">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" w="18" h="18" rx="2" ry="2"></rect>
+                            </svg> Dashboard</a>
+                    </li>
+                    <li class="nav-item"><a href="my-courses.html">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg> My Courses</a>
+                    </li>
+                    <li class="nav-item active"><a href="profile.html">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg> Profile Settings</a>
+                    </li>
+                </nav>
+                <div class="mt-8">
+                    <button class="btn btn-outline w-full logout-btn">Log Out</button>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <div class="header mb-8">
+                    <div>
+                        <h1 class="text-gradient">Account Settings</h1>
+                        <p>Manage your personal profile and preferences.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass glass-panel custom-form-wrapper">
+                        <h2 class="mb-4 text-gradient-secondary">Personal Information</h2>
+                        <div class="form-group">
+                            <label class="form-label text-muted">Full Name</label>
+                            <input type="text" id="profName" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-muted">Email Address (Read Only)</label>
+                            <input type="email" id="profEmail" class="form-control text-muted" readonly disabled>
+                        </div>
+
+                        <button id="updateProfileBtn" class="btn btn-primary mt-2">Save Changes</button>
+                    </div>
+
+                    <div class="glass glass-panel">
+                        <h2 class="mb-4">Account Details</h2>
+                        <ul style="list-style:none; line-height:2.5; font-size: 0.95rem;">
+                            <li class="flex justify-between border-b" style="border-bottom:1px solid var(--border)">
+                                <span class="text-muted">Role</span>
+                                <strong id="profRole" style="text-transform:capitalize">Loading...</strong>
+                            </li>
+                            <li class="flex justify-between border-b" style="border-bottom:1px solid var(--border)">
+                                <span class="text-muted">Member Since</span>
+                                <strong id="profJoinDate">--/--/----</strong>
+                            </li>
+                        </ul>
+
+                        <div class="mt-8 p-4 border rounded"
+                            style="border: 1px dashed var(--danger); border-radius: 8px;">
+                            <span class="text-danger block mb-2" style="color:var(--danger); font-weight:600">Danger
+                                Zone</span>
+                            <p class="text-muted text-small mb-4" style="font-size:0.85rem">Deleting your account is
+                                permanent. All course progress will be lost.</p>
+                            <button class="btn btn-outline text-danger"
+                                style="color:var(--danger); border-color:var(--danger)">Delete Account</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script src="js/app.js"></script>
+    </body>
+
+</html>
